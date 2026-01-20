@@ -1,0 +1,12 @@
+sudo systemctl disable --now \
+avahi-daemon.service \
+avahi-daemon.socket \
+bluetooth.service \
+cups.service \
+cups-browsed.service \
+gnome-remote-desktop.service \
+apport.service \
+cloud-init.service \
+cloud-init-local.service \
+cloud-config.service \
+cloud-final.service
