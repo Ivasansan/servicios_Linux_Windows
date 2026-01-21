@@ -1,0 +1,13 @@
+[Unit]
+Description=MkDocs Notas
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/notas
+ExecStart=%h/.local/bin/mkdocs serve -f %h/notas/mkdocs.yml -a 127.0.0.1:8000
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+
