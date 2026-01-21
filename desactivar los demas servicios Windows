@@ -1,0 +1,6 @@
+$services = "Fax","RemoteRegistry","bthserv","MapsBroker","XboxGipSvc","XblAuthManager","XblGameSave","XboxNetApiSvc","DiagTrack"
+
+foreach ($s in $services) {
+    Stop-Service -Name $s -Force -ErrorAction SilentlyContinue
+    Set-Service -Name $s -StartupType Disabled -ErrorAction SilentlyContinue
+}
